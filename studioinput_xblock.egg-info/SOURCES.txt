@@ -1,0 +1,12 @@
+studioinput/__init__.py
+studioinput/studioinput.py
+studioinput/static/README.txt
+studioinput/static/css/studioinput.css
+studioinput/static/html/studioinput.html
+studioinput/static/js/src/studioinput.js
+studioinput_xblock.egg-info/PKG-INFO
+studioinput_xblock.egg-info/SOURCES.txt
+studioinput_xblock.egg-info/dependency_links.txt
+studioinput_xblock.egg-info/entry_points.txt
+studioinput_xblock.egg-info/requires.txt
+studioinput_xblock.egg-info/top_level.txt

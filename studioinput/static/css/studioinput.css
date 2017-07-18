@@ -1,0 +1,9 @@
+/* CSS for StudioInputXBlock */
+
+.studioinput_block .count {
+    font-weight: bold;
+}
+
+.studioinput_block p {
+    cursor: pointer;
+}
