@@ -30,13 +30,4 @@ function StudioInputEditXBlock(runtime, element) {
         var addFieldButton = document.getElementById("more_fields");
     var input_number = 1;
 
-    function add_fields() {
-        input_number++;
-        var fields = '<div class="input-item">\n\
-        <label class="label setting-label" for="flashcards">Input (' + input_number + ')</label>\n\
-        <input class="input setting-input" name="text-'+input_number+'" placeholder="Text" type="text" />\n\
-        </div>';
-    }
-
-    addFieldButton.addEventListener("click", add_fields);
 }

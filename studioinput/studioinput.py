@@ -71,7 +71,6 @@ class StudioInputXBlock(XBlock):
         inputs = {}
 
         inputlist = data.get('inputs').items()
-        inputlist.reverse() # print out the list in the same order as entered
         for item in inputlist:
             inputs.append(item)     
 
