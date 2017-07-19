@@ -56,8 +56,13 @@ class StudioInputXBlock(XBlock):
     def studio_view(self, context=None):
         """Create a fragment used to display the edit view in the Studio."""
 
-        html = self.resource_string('static/html/studioinput_edit.html')
-        frag = Fragment(html.format(self=self))
+        context = {
+            'inputs': self.content,
+        }
+
+        frag = Fragment()
+        template = env.get_template('studioinput_edit.html')
+        frag.add_content(template.render(**context))
         frag.add_css(self.resource_string("static/css/studioinput_edit.css"))
         frag.add_javascript(self.resource_string("static/js/src/studioinput_edit.js"))
         frag.initialize_js('StudioInputEditXBlock')
