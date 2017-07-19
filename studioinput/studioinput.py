@@ -76,6 +76,7 @@ class StudioInputXBlock(XBlock):
         inputs = {}
 
         inputlist = data.get('inputs').items()
+        inputList.reverse()
         for item in inputlist:
             key , val = item
             inputs[key] = val  
