@@ -1,12 +1,14 @@
 <script>
     var addFieldButton = document.getElementById("more_fields");
+    var inputList  = document.getElementById('input-list');
     var input_number = 1;
     function add_fields() {
         input_number++;
         var fields = '<div class="input-item">\n\
-        <label class="label setting-label" for="flashcards">Input (' + input_number + ')</label>\n\
+        <label class="label setting-label">Input (' + input_number + ')</label>\n\
         <input class="input setting-input" name="text-'+input_number+'" placeholder="Text" type="text" />\n\
         </div>';
+        inputList.insertAdjacentHTML("beforeend", fields );
     }
     addFieldButton.addEventListener("click", add_fields);
 </script>
@@ -14,7 +16,7 @@
 <div class="wrapper-comp-settings is-active editor-with-buttons" id="settings-tab">
   <ul class="list-input settings-list">
     <li class="field comp-setting-entry is-set">
-      <div class="wrapper-comp-setting" id="flashcard-list">
+      <div class="wrapper-comp-setting" id="input-list">
         <div class="input-item">
           <label class="label setting-label" for="flashcards">Input (1)</label>
           <input class="input setting-input" name="front" placeholder="Text" type="text" />
