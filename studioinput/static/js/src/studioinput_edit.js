@@ -2,14 +2,12 @@ function StudioInputEditXBlock(runtime, element) {
     $(element).find('.save-button').bind('click', function() {
         var handlerUrl = runtime.handlerUrl(element, 'studio_submit');
 
-
-        /* Every flashcard (input-item) has two input fields, "front" and "back" */
         var input_list = {};
         var items = document.getElementsByClassName('input-item');
 
         for (var i = 0; i < items.length; i++) {
             var inputs = items[i].getElementsByTagName('input');
-            input_list[inputs[0].value] = inputs[1].value;
+            input_list[i] = inputs[i].value;
         }
 
         var data = {
@@ -27,7 +25,4 @@ function StudioInputEditXBlock(runtime, element) {
     $(element).find('.cancel-button').bind('click', function() {
         runtime.notify('cancel', {});
     });
-        var addFieldButton = document.getElementById("more_fields");
-    var input_number = 1;
-
 }
