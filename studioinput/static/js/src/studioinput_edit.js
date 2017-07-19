@@ -7,7 +7,7 @@ function StudioInputEditXBlock(runtime, element) {
 
         for (var i = 0; i < items.length; i++) {
             var inputs = items[i].getElementsByTagName('input');
-            input_list[i] = inputs[i].value;
+            input_list[inputs[0].value] = i;
         }
 
         var data = {
