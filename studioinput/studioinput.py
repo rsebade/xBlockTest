@@ -77,7 +77,7 @@ class StudioInputXBlock(XBlock):
 
         inputlist = data.get('inputs').items()
         for item in inputlist:
-            inputs.append(item)     
+            inputs[item] = item  
 
         self.content = inputs
 
